@@ -1,0 +1,9 @@
+{
+  "name": "Yogesh",
+  "age": 25,
+  "hobbies": [ "Running", "Swimming" ],
+  "address": {
+    "city": "Random",
+    "pinCode": 500023
+  }
+}
