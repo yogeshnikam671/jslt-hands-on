@@ -1,0 +1,4 @@
+{
+  "name": .props.name,
+  "fullAddress": .props.address.city + ", " + .props.address.pinCode
+}

@@ -1,12 +1,9 @@
 import model.Person
 
 fun main() {
-    val jsonNodeHandsOn = JsonNodeHandsOn()
-    serializeDeserializeJson(jsonNodeHandsOn)
-    jsonNodeHandsOn.serializeMapToJsonNode()
-    jsonToDataClassExample(jsonNodeHandsOn)
+    val jsltHandsOn = JsltHandsOn()
+    jsltHandsOn.transformJsonContent()
 }
-
 
 fun serializeDeserializeJson(jsonNodeHandsOn: JsonNodeHandsOn) {
     val jsonNode = jsonNodeHandsOn.getJsonNodeFromJson()
