@@ -1,8 +1,15 @@
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import model.Person
+import model.TransformedPerson
 
 fun main() {
     val jsltHandsOn = JsltHandsOn()
-    jsltHandsOn.transformJsonContent()
+    val transformedContentNode = jsltHandsOn.transformJsonContent()
+    val transformedContent = jacksonObjectMapper().convertValue(
+        transformedContentNode,
+        TransformedPerson::class.java
+    )
+    println("Jslt transformed content --> $transformedContent")
 }
 
 fun serializeDeserializeJson(jsonNodeHandsOn: JsonNodeHandsOn) {

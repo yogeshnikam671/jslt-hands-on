@@ -7,7 +7,7 @@ import java.io.FileReader
 
 class JsltHandsOn {
 
-    fun transformJsonContent() {
+    fun transformJsonContent(): JsonNode {
         val jsonString = FileReader(File("src/main/resources/sample.json")).readText()
         val jsonMap = jacksonObjectMapper().readValue<Map<String, Any>>(jsonString)
 
@@ -20,5 +20,6 @@ class JsltHandsOn {
 
         val transformedJsonNode = jsltExpression.apply(jsonNode)
         println("The transformed JsonNode --> $transformedJsonNode")
+        return transformedJsonNode
     }
 }
